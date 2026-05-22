@@ -1,7 +1,7 @@
 {
-    "name": "animal-island-ui",
-    "version": "0.9.2",
-    "description": "for learning purpose only, A nature-inspired React component library",
+    "name": "laeva-animal-island-ui",
+    "version": "0.10.0",
+    "description": "Animal Crossing inspired React component library, forked from animal-island-ui with enhancements",
     "type": "module",
     "main": "dist/cjs/index.cjs",
     "module": "dist/es/index.js",
@@ -26,7 +26,7 @@
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/guokaigdg/animal-island-ui"
+        "url": "https://github.com/Laevatain0308/animal-island-ui"
     },
     "homepage": "https://github.com/guokaigdg/animal-island-ui#readme",
     "bugs": {
