@@ -16,7 +16,7 @@ A React UI component library inspired by Animal Crossing: New Horizons
 
 ## 🚀 What's Different from Upstream
 
-- **BidirectionalTypewriter** — 双向打字机组件。支持 `forward`（逐字打出）和 `backward`（逐字消失）两种模式。API 与 Typewriter 一致，通过 `direction` 属性控制方向。
+- **BidirectionalTypewriter** — A bidirectional typewriter component that supports both `forward` (typing out character by character) and `backward` (deleting character by character) modes. The API is consistent with Typewriter, controlled via the `direction` prop.
 
 ## Introduction
 
