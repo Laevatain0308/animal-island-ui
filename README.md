@@ -1,4 +1,4 @@
-# 🏝 Animal-Island-UI
+# 🏝 Laeva-Animal-Island-UI
 
 <div align="center">
     <img src="docs/img/readme-home.png" alt="animal-island-ui" style="border-radius: 12px; width: 40%; display: block; margin: 0 auto;" />    
@@ -6,23 +6,17 @@
 <div align="center">
 A React UI component library inspired by Animal Crossing: New Horizons
 </div>
-<br/>
-<div align="center">
-    <a href="https://github.com/guokaigdg/animal-island-ui/stargazers"><img src="https://img.shields.io/github/stars/guokaigdg/animal-island-ui?style=flat-square" alt="Stars"></a>
-    <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square" alt="License"></a>
-    <a href="LICENSE"><img src="https://img.shields.io/npm/dm/animal-island-ui.svg?style=flat-square" alt=""></a>
-    <a href="https://github.com/guokaigdg/animal-island-ui/releases"><img src="https://img.shields.io/github/v/tag/guokaigdg/animal-island-ui?label=version&style=flat-square" alt="Version"></a>
-</div>
-<br/>
-<div align="center">
-    <a href="https://hellogithub.com/repository/guokaigdg/animal-island-ui" target="_blank"><img src="https://api.hellogithub.com/v1/widgets/recommend.svg?rid=98ecff41d142466d8d72694a6fadf9e9&claim_uid=pyGqTPIRMdo7fBS&theme=neutral" alt="Featured｜HelloGitHub" style="width: 250px; height: 54px;" width="250" height="54" /></a>
-</div>
 
 <br/>
 <p align="center">
     English | <a href="./docs/README.zh-CN.md">简体中文</a>
 </p>
 
+> **Note:** This repository is a fork of [guokaigdg/animal-island-ui](https://github.com/guokaigdg/animal-island-ui) with additional components listed below. All credit for the original design and components belongs to the upstream author.
+
+## 🚀 What's Different from Upstream
+
+- **BidirectionalTypewriter** — 双向打字机组件。支持 `forward`（逐字打出）和 `backward`（逐字消失）两种模式。API 与 Typewriter 一致，通过 `direction` 属性控制方向。
 
 ## Introduction
 
