@@ -23,38 +23,6 @@
 
 所有视觉元素、布局、图标、动画均为独立设计实现，未直接使用任何任天堂官方美术素材、代码或资源文件。
 
-## 🎉 vue 版本
-
-- [animal-island-vue](https://github.com/guokaigdg/animal-island-vue)
-
-## 预览
-
-- 在线预览 (PC 端) [animal-island-ui-pc](https://guokaigdg.github.io/animal-island-ui/#/)
-- 在线预览（移动端）[animal-island-ui-mobile](https://guokaigdg.github.io/animal-island-ui/#/)
-
-## 安装
-
-```bash
-npm install animal-island-ui
-```
-
-## 快速上手
-
-> ⚠️ **重要**: 请务必导入样式文件 `import 'animal-island-ui/style'`，否则组件将没有样式与字体!
-
-```tsx
-import { Button, Card } from 'animal-island-ui';
-import 'animal-island-ui/style';
-
-function App() {
-    return (
-        <div>
-            <Button type="primary">开始冒险</Button>
-            <Card color="app-blue">欢迎来到无人岛！</Card>
-        </div>
-    );
-}
-```
 
 ## 文档
 
@@ -66,77 +34,6 @@ function App() {
 | [`DESIGN_PROMPT.md`](./DESIGN_PROMPT.md) | 一键复刻提示词，适配 v0 / Figma AI / Midjourney / DALL-E，含色板、字体、尺寸表、Modal clip-path 与禁用清单。   |
 | [`skill/SKILL.md`](./skill/SKILL.md)     | 像素级样式规范 Skill，覆盖设计 token、全部组件精确 CSS、Demo 布局数值、CSS 变量模板与新组件开发 Checklist。    |
 | [`CONTRIBUTING.md`](./CONTRIBUTING.md)   | 贡献指南                                                                                                       |
-
-## 本地开发
-
-```bash
-# 克隆仓库
-git clone https://github.com/guokaigdg/animal-island-ui.git
-cd animal-island-ui
-
-# 安装依赖
-npm install
-
-# 启动 Demo 开发服务器
-npm run dev
-
-# 构建组件库
-npm run build
-
-# 构建 Demo 站点
-npm run build:demo
-```
-
-## 案例
-
-<table>
-<tr valign="top">
-  <td align="center" width="33%">
-    <br/>
-    <img src="img/ac-site-template.png" alt="ac-site-template" style="border-radius: 8px; width: 90%; display: block; margin: 8px auto 0;" />
-    <br/><a href="https://github.com/yunxinz/ac-site-template">ac-site-template</a><br/><sub>动森主题个人网站模板</sub>
-  </td>
-  <td align="center" width="33%">
-    <br/>
-    <img src="img/hi-kid.png" alt="HiKid" style="border-radius: 8px; width: 90%; display: block; margin: 8px auto 0;" />
-    <br/><a href="https://github.com/xiaochong/hi-kid">HiKid</a><br/><sub>儿童教育练习英语口语和听力</sub>
-  </td>
-  <td align="center" width="33%">
-    <br/>
-    <img src="img/case-animal-blog.png" alt="animal-island-blog" style="border-radius: 8px; width: 90%; display: block; margin: 8px auto 0;" />
-    <br/><a href="https://github.com/guokaigdg/animal-island-blog">animal-island-blog</a><br/><sub>动森风格博客</sub>
-  </td>
-</tr>
-<tr valign="top">
-  <td align="center" width="33%">
-    <br/>
-    <img src="img/android-ui.png" alt="android-ui" style="border-radius: 8px; width: 90%; display: block; margin: 8px auto 0;" />
-    <br/><a href="https://github.com/liuyuhong0324/AnimalIslandUI">AnimalIslandUI</a><br/><sub>动森风格安卓UI库</sub>
-  </td>
-  <td align="center" width="33%">
-    <br/>
-    <img src="img/itbug-shop.png" alt="ItbugShop" style="border-radius: 8px; width: 90%; display: block; margin: 8px auto 0;" />
-    <br/><a href="https://itbug.shop/">ItbugShop</a><br/><sub>梁典典的博客</sub>
-  </td>
-  <td align="center" width="33%">
-    <br/>
-    <img src="img/KidsMathQuest.png" alt="KidsMathQuest" style="border-radius: 8px; width: 90%; display: block; margin: 8px auto 0;" />
-    <br/><a href="https://github.com/guokaigdg/KidsMathQuest">KidsMathQuest</a><br/><sub>小学生练习加减乘除</sub>
-  </td>
-</tr>
-<tr valign="top">
-  <td align="center" width="33%">
-    <br/>
-    <img src="img/flutter-ui.png" alt="animal_island_flutter" style="border-radius: 8px; width: 90%; display: block; margin: 8px auto 0;" />
-    <br/><a href="https://github.com/ohmangocat/animal_island_flutter">animal_island_flutter</a><br/><sub>动森风格Flutter UI库</sub>
-  </td>
-  <td align="center" width="33%">
-  </td>
-  <td align="center" width="33%">
-  </td>
-</tr>
-</table>
-
 ## 注意事项
 
 - 本项目仅用于个人学习、研究与非商业展示，禁止任何形式的商业使用、二次售卖或盈利行为。
