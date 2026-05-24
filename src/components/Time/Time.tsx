@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { Cursor } from '../Cursor';
 import styles from './time.module.less';
 
 export interface TimeProps {
@@ -18,7 +17,6 @@ export const Time: React.FC<TimeProps> = ({ className }) => {
     }, []);
 
     return (
-        <Cursor>
             <div className={`${styles.acDatetime} ${className || ''}`}>
                 <div className={styles.acDate}>
                     <span className={styles.acWeekday}>
@@ -34,7 +32,6 @@ export const Time: React.FC<TimeProps> = ({ className }) => {
                     {currentTime.getMinutes().toString().padStart(2, '0')}
                 </div>
             </div>
-        </Cursor>
     );
 };
 
