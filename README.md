@@ -17,6 +17,7 @@ A React UI component library inspired by Animal Crossing: New Horizons
 ## 🚀 What's Different from Upstream
 
 - **BidirectionalTypewriter** — A bidirectional typewriter component that supports both `forward` (typing out character by character) and `backward` (deleting character by character) modes. The API is consistent with Typewriter, controlled via the `direction` prop.
+- **ControlledCollapse** — A controlled collapse panel component that accepts `expanded` and `onToggle` props, enabling external state management. Ideal for accordion-style layouts where only one panel should be open at a time. Visual design is identical to Collapse.
 
 ## Introduction
 

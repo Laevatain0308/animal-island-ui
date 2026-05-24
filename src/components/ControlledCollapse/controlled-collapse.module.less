@@ -1,0 +1,103 @@
+@import '../../styles/variables.less';
+
+.faqCard {
+    position: relative;
+    background: @bg-color;
+    border-radius: @border-radius-base;
+    border: @border-width solid @border-color;
+    overflow: hidden;
+    transition: border-color @motion-duration-base @motion-ease;
+    margin-bottom: @spacing-md;
+
+    &.disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+    }
+}
+
+.questionHeader {
+    display: flex;
+    align-items: center;
+    gap: @spacing-md;
+    width: 100%;
+    padding: @spacing-lg @spacing-xl;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    font-family: inherit;
+    color: inherit;
+
+    &:disabled {
+        cursor: not-allowed;
+    }
+}
+
+.questionIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    background: @primary-color;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1;
+    flex-shrink: 0;
+    transition:
+        background-color @motion-duration-base @motion-ease,
+        transform @motion-duration-base @motion-ease;
+    box-shadow: 0 2px 4px rgba(25, 200, 185, 0.3);
+
+    .expanded & {
+        background: @primary-color-active;
+        transform: rotate(180deg);
+    }
+}
+
+.questionText {
+    flex: 1;
+    font-size: @font-size-lg;
+    font-weight: 600;
+    color: @text-color;
+    line-height: 1.4;
+}
+
+.leafDecoration {
+    color: @primary-color;
+    opacity: 0.5;
+    transition:
+        opacity @motion-duration-base @motion-ease,
+        transform @motion-duration-base @motion-ease;
+
+    .expanded & {
+        opacity: 1;
+        transform: rotate(45deg);
+    }
+}
+
+.answerWrapper {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.3s @motion-ease;
+    will-change: grid-template-rows;
+
+    .expanded & {
+        grid-template-rows: 1fr;
+    }
+}
+
+.answerContent {
+    overflow: hidden;
+    padding: 0 @spacing-xl;
+    color: @text-color-secondary;
+    font-size: @font-size-base;
+    line-height: 1.7;
+    transition: padding @motion-duration-base @motion-ease;
+
+    .expanded & {
+        padding-bottom: @spacing-xl;
+    }
+}

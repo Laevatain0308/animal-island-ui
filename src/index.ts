@@ -47,6 +47,9 @@ export type { FooterProps, FooterType } from './components/Footer';
 export { Collapse } from './components/Collapse';
 export type { CollapseProps } from './components/Collapse';
 
+export { ControlledCollapse } from './components/ControlledCollapse';
+export type { ControlledCollapseProps } from './components/ControlledCollapse';
+
 export { Cursor } from './components/Cursor';
 export type { CursorProps } from './components/Cursor';
 

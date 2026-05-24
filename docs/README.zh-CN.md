@@ -16,6 +16,7 @@
 ## 🚀 与上游的不同之处
 
 - **BidirectionalTypewriter** — 双向打字机组件。支持 `forward`（逐字打出）和 `backward`（逐字消失）两种模式。API 与 Typewriter 一致，通过 `direction` 属性控制方向。
+- **ControlledCollapse** — 受控折叠面板组件。接受 `expanded` 和 `onToggle` 属性，支持外部状态管理。适用于手风琴等一次只展开一个面板的场景。视觉样式与 Collapse 完全一致。
 
 ## 介绍
 

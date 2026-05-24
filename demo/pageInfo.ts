@@ -20,6 +20,10 @@ export const PAGE_INFO: Record<string, { title: string; desc: string }> = {
         title: 'Collapse 折叠面板',
         desc: '折叠面板组件 — 支持展开/收起、默认展开、禁用状态',
     },
+    'controlled-collapse': {
+        title: 'ControlledCollapse 受控折叠面板',
+        desc: '受控折叠面板组件 — 支持外部状态管理展开/收起，适合手风琴等需要控制面板展开的场景',
+    },
     cursor: {
         title: 'Cursor 光标',
         desc: '光标组件 — 自定义手指光标，支持自定义尺寸、点击动画',

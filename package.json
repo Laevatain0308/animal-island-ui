@@ -1,6 +1,6 @@
 {
     "name": "laeva-animal-island-ui",
-    "version": "0.10.7",
+    "version": "0.10.8",
     "description": "Animal Crossing inspired React component library, forked from animal-island-ui with enhancements",
     "type": "module",
     "main": "dist/cjs/index.cjs",

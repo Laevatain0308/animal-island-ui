@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Input, Switch, Modal, Card, Collapse, Divider, Typewriter, Tabs, Cursor } from '../src';
+import { Button, Input, Switch, Modal, Card, Collapse, ControlledCollapse, Divider, Typewriter, Tabs, Cursor } from '../src';
 import {
     labelStyle,
     sectionStyle,
@@ -804,6 +804,76 @@ export default App;`}
     </div>
 );
 
+const CONTROLLED_COLLAPSE_API: ApiRow[] = [
+    { prop: 'question', desc: '问题标题', type: 'ReactNode', defaultVal: '-', required: true },
+    { prop: 'answer', desc: '答案内容', type: 'ReactNode', defaultVal: '-', required: true },
+    { prop: 'expanded', desc: '是否展开（受控）', type: 'boolean', defaultVal: '-', required: true },
+    { prop: 'onToggle', desc: '展开状态变化回调', type: '() => void', defaultVal: '-', required: true },
+    { prop: 'disabled', desc: '是否禁用', type: 'boolean', defaultVal: 'false' },
+    { prop: 'className', desc: '自定义类名', type: 'string', defaultVal: '-' },
+    { prop: 'style', desc: '自定义样式', type: 'CSSProperties', defaultVal: '-' },
+];
+
+const ControlledCollapseDemo: React.FC = () => (
+    <div style={sectionStyle}>
+        <div style={sectionTitleStyle}>
+            ControlledCollapse <span style={tagStyle}>受控</span>
+        </div>
+        <div style={demoBodyStyle}>
+            <div style={labelStyle}>受控手风琴（点击展开/关闭，外部管理状态）</div>
+            <StatefulDemo />
+        </div>
+        <CodeBlock
+            code={`import React, { useState } from 'react';
+import { ControlledCollapse } from 'laeva-animal-island-ui';
+
+const App = () => {
+    const [expanded, setExpanded] = useState<number | null>(0);
+
+    return (
+        <div>
+            {['问题一', '问题二', '问题三'].map((q, i) => (
+                <ControlledCollapse
+                    key={i}
+                    question={\`第\${i + 1}个问题: \${q}\`}
+                    answer={<p>这是第{i + 1}个问题的答案</p>}
+                    expanded={expanded === i}
+                    onToggle={() => setExpanded(expanded === i ? null : i)}
+                />
+            ))}
+        </div>
+    );
+};`}
+        />
+        <ApiTable rows={CONTROLLED_COLLAPSE_API} />
+    </div>
+);
+
+// ControlledCollapse demo 内嵌的状态管理组件
+const StatefulDemo: React.FC = () => {
+    const [expanded, setExpanded] = React.useState<number | null>(0);
+    return (
+        <div style={{ maxWidth: 720 }}>
+            {['问题一：动森里可以种多少种花？', '问题二：怎样获得金色工具？', '问题三：大头菜价格多久刷新？'].map((q, i) => (
+                <ControlledCollapse
+                    key={i}
+                    question={q}
+                    answer={<p>这是第{i + 1}个问题的答案内容。点击标题即可展开或关闭此面板。</p>}
+                    expanded={expanded === i}
+                    onToggle={() => setExpanded(expanded === i ? null : i)}
+                />
+            ))}
+            <ControlledCollapse
+                question="禁用状态"
+                answer={<p>这个面板被禁用了</p>}
+                expanded={false}
+                onToggle={() => {}}
+                disabled
+            />
+        </div>
+    );
+};
+
 const CursorDemo: React.FC = () => (
     <div style={sectionStyle}>
         <div style={sectionTitleStyle}>
@@ -1268,6 +1338,10 @@ export const PAGE_INFO: Record<string, { title: string; desc: string }> = {
         title: 'Collapse 折叠面板',
         desc: '折叠面板组件 — 支持展开/收起、默认展开、禁用状态',
     },
+    'controlled-collapse': {
+        title: 'ControlledCollapse 受控折叠面板',
+        desc: '受控折叠面板组件 — 支持外部状态管理展开/收起，适合手风琴等需要控制面板展开的场景',
+    },
     cursor: {
         title: 'Cursor 光标',
         desc: '光标组件 — 自定义手指光标，支持自定义尺寸、点击动画',
@@ -1332,6 +1406,7 @@ const PAGES: Record<string, React.FC> = {
     switch: SwitchDemo,
     card: CardDemo,
     collapse: CollapseDemo,
+    'controlled-collapse': ControlledCollapseDemo,
     cursor: CursorDemo,
     time: TimeDemo,
     phone: PhoneDemo,
